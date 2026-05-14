@@ -96,7 +96,7 @@ const PollDashboard = () => {
 
   // Copy Link
   const handleCopy = async () => {
-    await navigator.clipboard.writeText(`http://localhost:5173/poll/${id}`);
+    await navigator.clipboard.writeText(`${window.location.origin}/poll/${id}`);
 
     toast.success("Link copied");
   };

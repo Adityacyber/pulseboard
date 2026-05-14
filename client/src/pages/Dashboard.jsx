@@ -66,7 +66,9 @@ const Dashboard = () => {
 
   // Copy Link
   const handleCopy = async (pollId) => {
-    await navigator.clipboard.writeText(`http://localhost:5173/poll/${pollId}`);
+    await navigator.clipboard.writeText(
+      `${window.location.origin}/poll/${pollId}`,
+    );
 
     setCopiedId(pollId);
 
